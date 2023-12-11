@@ -7,10 +7,10 @@ from selenium.webdriver.common.by import By
 browser = webdriver.Firefox()
 browser.get('https://fs2.formsite.com/meherpavan/form2/index.html?1537702596407')
 browser.maximize_window()
-browser.execute_script("window.scrollTO(0, document.body.scrollHeight);")
+browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
 # find all the elements
-checkboxes = browser.find_element(By.XPATH,"//input[@type='checkbox']")
+checkboxes = browser.find_elements(By.XPATH,"//input[@type='checkbox']")
 
 for checkbox in checkboxes:
     checkbox.send_keys(Keys.SPACE)
